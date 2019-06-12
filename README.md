@@ -13,13 +13,14 @@
 - 
 
 # :pencil2: Other, unclassified
-| CASE NUMBER   | 	CASE NAME  				|  	RUNTIME  	|  	DESC	  	|
-| :--------:   	| 	:-----  			  	| 	:----   	|  	:----   	|
+| CASE NUMBER   | 	  CASE NAME  			|  	RUNTIME  	|  	DESC	  	|
+| :--------:   	| 	  :-----  			 	| 	:----   	|  	:----   	|
 |    1        	|    	TwoSum   				|   700ms    	|  	python  	|
 |    1        	|    	TwoSum  				|   4ms   		|  	go	    	|
 |    2        	|    	AddTwoNumbers   |  	36ms  		|  	python  	|
 |    ...       	|    	...    					|  	...  		  |  	...	    	|
 
+# :watermelon: Basic Sort Algorithm
 
 
 
