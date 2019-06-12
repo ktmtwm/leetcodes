@@ -1,0 +1,7 @@
+"""
+"""
+
+class SelectSortObj(Object):
+	pass
+
+
