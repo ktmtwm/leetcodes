@@ -1,6 +1,11 @@
 # leetcodes 
 
 # :pencil2: Double Points Thought
+| CASE NUMBER        	|  CASE NAME  	|  RUNTIME  	|
+| :--------:   		| :-----  	| :----:  	|
+|    167     |    TwoSumII_Inputarrayissorted   |    	36ms    	|
+|    345     |    ReverseVowelsofaString  	|   	116ms   	|
+|    633     |    SumofSquareNumbers    	|  	100ms  		|
 - 167_TwoSumII_Inputarrayissorted                     
 	36  ms
 
