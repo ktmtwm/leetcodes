@@ -10,7 +10,7 @@
 
 
 # :pencil2: Sort
-- 
+
 
 # :pencil2: Other, unclassified
 | CASE NUMBER   | 	  CASE NAME  			|  	RUNTIME  	|  	DESC	  	|
