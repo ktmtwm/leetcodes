@@ -35,7 +35,7 @@ class SelectSortTestCase(unittest.TestCase):
 		s = [55, 4, 3, 2, 2, -1]
 		self.select_sort.sort(s)
 
-		self.assertEqual(s, [1, 2, 2, 3, 4, 55])
+		self.assertEqual(s, [-1, 2, 2, 3, 4, 55])
 
 	def testLargeList(self):
 		pass
