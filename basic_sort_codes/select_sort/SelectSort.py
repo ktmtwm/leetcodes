@@ -5,7 +5,10 @@ class SelectSortObj(object):
 	def sort(self, s):
 		"""
 		DESC: 	each time grab a smallest move to sorted area
-		PERFORMANCE: algorithm complexity o(n2)
+		PERFORMANCE: 
+				o(n2), average time cost
+				o(n2), best time cost
+				o(n),  space cost
 		"""
 		sorted_i = 0
 		inter_j = 0
