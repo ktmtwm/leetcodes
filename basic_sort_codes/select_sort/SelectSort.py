@@ -3,6 +3,10 @@
 
 class SelectSortObj(object):
 	def sort(self, s):
+		"""
+		DESC: 	each time grab a smallest move to sorted area
+		PERFORMANCE: algorithm complexity o(n2)
+		"""
 		sorted_i = 0
 		inter_j = 0
 
