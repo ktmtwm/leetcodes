@@ -1,14 +1,14 @@
 """
 """
-from InsertSort import InsertSortObj
+from CockTailSort import CockTailSortObj
 import unittest
 
-class InsertSortTestCase(unittest.TestCase):
+class CockTailSortTestCase(unittest.TestCase):
 	def setUp(self):
 		"""
 		DESC: init tested obj
 		"""
-		self.sort = InsertSortObj()
+		self.sort = CockTailSortObj()
 
 	def testEmptyList(self):
 		"""
@@ -36,7 +36,7 @@ class InsertSortTestCase(unittest.TestCase):
 		self.sort.sort(s)
 
 		self.assertEqual(s, [-1, 2, 2, 3, 4, 55])
-
+		
 	def testNormalList(self):
 		"""
 		DESC: normal sort
@@ -51,10 +51,10 @@ class InsertSortTestCase(unittest.TestCase):
 
 def run_cases():
 	suite = unittest.TestSuite()
-	suite.addTest(InsertSortTestCase("testEmptyList"))
-	suite.addTest(InsertSortTestCase("testSortedList"))
-	suite.addTest(InsertSortTestCase("testReversedList"))
-	suite.addTest(InsertSortTestCase("testNormalList"))
+	suite.addTest(CockTailSortTestCase("testEmptyList"))
+	suite.addTest(CockTailSortTestCase("testSortedList"))
+	suite.addTest(CockTailSortTestCase("testReversedList"))
+	suite.addTest(CockTailSortTestCase("testNormalList"))
 	return suite
 
 if __name__ == "__main__":

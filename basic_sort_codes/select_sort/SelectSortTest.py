@@ -36,6 +36,15 @@ class SelectSortTestCase(unittest.TestCase):
 		self.select_sort.sort(s)
 
 		self.assertEqual(s, [-1, 2, 2, 3, 4, 55])
+		
+	def testNormalList(self):
+		"""
+		DESC: normal sort
+		"""
+		s = [-2, 4, 55, 2, 2, -1]
+		self.sort.sort(s)
+
+		self.assertEqual(s, [-2, -1, 2, 2, 4, 55])
 
 	def testLargeList(self):
 		pass
@@ -45,6 +54,7 @@ def run_cases():
 	suite.addTest(SelectSortTestCase("testEmptyList"))
 	suite.addTest(SelectSortTestCase("testSortedList"))
 	suite.addTest(SelectSortTestCase("testReversedList"))
+	suite.addTest(SelectSortTestCase("testNormalList"))
 	return suite
 
 if __name__ == "__main__":
