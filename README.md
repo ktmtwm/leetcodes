@@ -22,5 +22,23 @@
 
 # :watermelon: Basic Sort Algorithm
 
+- BUBBLE SORT
+
+  - DESC: 	
+  
+          move the bigger one to right nearby,
+  
+				  when there is no move action return.
+          
+				  BETTER than select sort when sorted/part-sorted.
+          
+	PERFORMANCE: 
+  
+				  o(n2),	average time cost
+          
+				  o(n),	best time cost
+          
+				  o(1),	space cost
+          
 
 
