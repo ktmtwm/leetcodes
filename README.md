@@ -58,6 +58,15 @@
 				o(n2),	average time cost
 				o(n),	best time cost
 				o(1),	space cost
+- SELECT SORT
 
+  - DESC: 	
+  				
+				each time grab a smallest move to sorted area
+    PERFORMANCE: 
+				
+				o(n2), average time cost
+				o(n2), best time cost
+				o(n),  space cost
 
 
