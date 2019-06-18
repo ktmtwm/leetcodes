@@ -26,19 +26,38 @@
 
   - DESC: 	
   
-          move the bigger one to right nearby,
-  
+          			  move the bigger one to right nearby,
 				  when there is no move action return.
-          
 				  BETTER than select sort when sorted/part-sorted.
           
-	PERFORMANCE: 
+    PERFORMANCE: 
   
 				  o(n2),	average time cost
-          
 				  o(n),	best time cost
-          
 				  o(1),	space cost
           
+- COCKTAIL SORT
+
+  - DESC: 	
+  				
+				Better than bubble because it sorts moving forwards and backwards
+				BETTER than select sort when sorted/part-sorted.
+    PERFORMANCE: 
+				
+				o(n2),	average time cost
+				o(n),	best time cost
+				o(1),	space cost
+          
+- INSERT SORT
+
+  - DESC: 	
+  				
+				insert element to sorted area
+    PERFORMANCE: 
+				
+				o(n2),	average time cost
+				o(n),	best time cost
+				o(1),	space cost
+
 
 
