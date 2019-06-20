@@ -26,7 +26,7 @@
 
   - DESC: 	
   
-          			move the bigger one to right nearby,
+  				move the bigger one to right nearby,
 				when there is no move action return.
 				BETTER than select sort when sorted/part-sorted.
           
