@@ -6,22 +6,23 @@ class Sudoku(object):
 	n = len(base)
 	s = numpy.zeros((n, n), int)
 	retry = 0
+	maxRetry = 110
 
 	def ifRetry(self):
 		"""
 		:rtype true/false
 		"""
 		self.retry = self.retry + 1
-		if self.retry > 50:
+		if self.retry > self.maxRetry:
 			return 0
 		return 1
 	
 	def terminate(self):
-		return self.retry > 50
+		return self.retry > self.maxRetry
 
 	def reset(self):
 		self.retry = 0
-		self.s = numpy.zeros((self.n, self.n))
+		self.s = numpy.zeros((self.n, self.n), int)
 
 	def randomBase(self):
 		random.shuffle(self.base)
@@ -54,41 +55,37 @@ class Sudoku(object):
 			self.reset()
 			self.startLoopLine()
 			if not self.terminate():
+				print "-------END-------"
 				print self.s
 				break
 		
 	def startLoopLine(self):
 		#line
 		for i in xrange(self.n):
-			self.loopLine(i)
+			print "setting: " + str(i)
+			while not self.setLine(i):
+				if not self.ifRetry:
+					break
+
 			if self.terminate():
 				return
-
+			
 	# linei generation
-	def loopLine(self, i):
-		if self.terminate():
-			return
-
+	def setLine(self, i):
 		self.s[i] = self.randomBase()
-		print self.s[i]
 
 		#column check
 		for j in xrange(self.n):
 			if not self.judgeUnique(self.s[:, j]):
-				if not self.ifRetry():
-					return
-				self.loopLine(i)
-		
-		if self.terminate():
-			return	
+				return 0
+
 		#3*3 check
 		xs = self.sub3_3_start(i)
 		for j in xrange(3):
-			if not self.judgeUnique(self.s[xs:xs+3, j:j+3]):
-				if not self.ifRetry():
-					return
-				self.loopLine(i)
+			if not self.judgeUnique(self.s[xs:xs+3, j*3:j*3+3]):
+				return 0
 
+		return 1
 				
 if __name__ == '__main__':
 	Sudoku().berateRandom()
