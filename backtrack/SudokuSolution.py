@@ -58,36 +58,68 @@ class Solution(object):
 		"""
 		:type res:[][], 9*9
 		"""
-		# self.result = None
-		while 0 in res[0]:
-			self.result = None
-			self.backtrack(res, 0)
-			res = self.result
+		self.result = None
+		# while 0 in res[0]:
+		# 	self.result = None
+		# 	self.backtrack(res, 0)
+		# 	res = self.result
+		# for x in xrange(self.n):
+		self.backtrack(res, 0, 0)
 
 		return self.result
 
-	def backtrack(self, res, row):
+	def backtrack(self, res, row, column):
+
+		if column == self.n:
+			return
+
 		if row == self.n:
 			self.result = res
 			return
 
-		if 0 not in res[row]:
-			self.backtrack(res, row+1)
+		# if 0 not in res[row]:
+		# 	self.backtrack(res, row+1, column)
 
 		for y in xrange(self.n):
 			if res[row][y] != 0:
-				continue
-			print row, y,res
-			print 
+				self.backtrack(res, row, y+1)
 			# position row,y need to solute				
 			for num in self.base:
 				if not self.isValid(res, row, y, num):
 					continue
 				res[row][y] = num
-				self.backtrack(res, row+1)
+				self.backtrack(res, row, y+1)
 				if self.result is not None:
 					return
 				res[row][y] = 0
+
+		self.backtrack(res, row+1, 0)
+
+	# def backtrack(self, res, row):
+	# 	if row == self.n:
+	# 		self.result = res
+	# 		return
+
+	# 	# if 0 not in res[row]:
+	# 	# 	self.backtrack(res, row+1)
+
+	# 	for y in xrange(self.n):
+	# 		# if res[row][y] != 0:
+	# 		# 	continue
+	# 		# position row,y need to solute				
+	# 		org = res[row][y]
+	# 		if org != 0:
+	# 			for num in self.base:
+	# 				if not self.isValid(res, row, y, num):
+	# 					continue
+
+
+	# 			# res[row][y] = num
+	# 			org = res[row][y]
+	# 			self.backtrack(res, row+1)
+	# 			if self.result is not None:
+	# 				return
+	# 			res[row][y] = 0
 
 if __name__ == '__main__':
 	res = [[6, 0, 7, 0, 0, 0, 5, 1, 8],
