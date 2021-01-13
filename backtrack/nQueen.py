@@ -1,7 +1,8 @@
 class Solution(object):
-	res = []
-	queen = 'Q'
-	space = '.'
+	def __init__(self):
+		self.res = []
+		self.queen = 'Q'
+		self.space = '.'
 
 	def solveNQueens(self, n):
 		"""
@@ -66,6 +67,3 @@ class Solution(object):
 			cb[row][x] = self.queen
 			self.backtrack(cb, row+1)
 			cb[row][x] = self.space
-
-if __name__ == '__main__':
-	print Solution().solveNQueens(1)
